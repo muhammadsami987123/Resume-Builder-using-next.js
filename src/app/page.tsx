@@ -14,6 +14,15 @@ export default function Home() {
     setResumeData(data);
   };
 
+  const handleDownloadPDF = () => {
+    if (resumeData) {
+      const link = document.createElement('a');
+      link.download = 'resume.pdf';
+      link.href = URL.createObjectURL(new Blob([JSON.stringify(resumeData)], { type: 'application/pdf' }));
+      link.click();
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
@@ -30,12 +39,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <ResumeForm 
                   onSubmit={handleSubmit}
-                  onDownloadPDF={resumeData ? () => {
-                    const link = document.createElement('a');
-                    link.download = 'resume.pdf';
-                    link.href = URL.createObjectURL(new Blob([JSON.stringify(resumeData)], { type: 'application/pdf' }));
-                    link.click();
-                  } : undefined}
+                  onDownloadPDF={resumeData ? handleDownloadPDF : undefined}
                 />
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">

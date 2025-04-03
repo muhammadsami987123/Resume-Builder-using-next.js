@@ -3,11 +3,13 @@ import { ResumeData,  Experience, Education, Skill } from '../types/resume';
 import { v4 as uuidv4 } from 'uuid';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+
 interface ResumeFormProps {
   onSubmit: (data: ResumeData) => void;
+  onDownloadPDF?: () => void;
 }
 
-export default function ResumeForm({ onSubmit }: ResumeFormProps) {
+export default function ResumeForm({ onSubmit, onDownloadPDF }: ResumeFormProps) {
   const router = useRouter();
   const [formData, setFormData] = useState<ResumeData>({
     personalInfo: {
