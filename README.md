@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Builder
+
+A modern, responsive web application for creating professional resumes with customizable templates. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🎨 Multiple professional resume templates
+- 📝 Easy-to-use form interface
+- 🖼️ Profile picture upload
+- 📚 Sections for Experience, Education, and Skills
+- 📥 Download resume in PDF format
+- 📱 Fully responsive design
+- 🎯 Modern and clean UI
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) - React framework
+- [TypeScript](https://www.typescriptlang.org) - Type safety
+- [Tailwind CSS](https://tailwindcss.com) - Styling
+- [React PDF](https://react-pdf.org) - PDF generation
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.0 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/muhammadsami987123/Resume-Builder-using-next.js.git
+cd resume-builder
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+resume-builder/
+├── src/
+│   ├── app/              # Next.js app directory
+│   │   ├── page.tsx      # Home page
+│   │   ├── builder/      # Resume builder page
+│   │   ├── templates/    # Template selection page
+│   │   └── preview/      # Resume preview page
+│   ├── components/       # React components
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ResumeForm.tsx
+│   │   └── ResumePreview.tsx
+│   └── types/            # TypeScript type definitions
+└── public/               # Static assets
+    └── templates/        # Template images
+```
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Select a template from the templates page
+2. Fill in your personal information
+3. Add your work experience
+4. Add your education details
+5. Include your skills
+6. Preview your resume
+7. Download as PDF
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- [Next.js](https://nextjs.org) for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com) for the utility-first CSS framework
+- [React PDF](https://react-pdf.org) for PDF generation capabilities
